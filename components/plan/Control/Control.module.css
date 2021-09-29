@@ -1,0 +1,25 @@
+.control {
+  max-width: 100%;
+}
+
+.control:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.root {
+  margin-bottom: 1em;
+}
+
+.help,
+.error {
+  margin: 0;
+  font-size: 80%;
+}
+
+.help {
+  color: gray;
+}
+
+.error {
+  color: red;
+}
