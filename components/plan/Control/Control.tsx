@@ -1,14 +1,15 @@
-import { ErrorMessage, FormikErrors, FormikTouched } from 'formik';
 import React from 'react';
 import styles from './Control.module.css';
 
-export function Control<T>({
-  children,
-  help,
+export function Control({
   name,
+  help,
+  error,
+  children,
 }: {
-  help?: string;
-  name: keyof T;
+  name: string;
+  help?: React.ReactNode;
+  error?: React.ReactNode;
   children: React.ReactChild | React.ReactChildren;
 }) {
   return (
@@ -16,7 +17,7 @@ export function Control<T>({
       {children}
       <div className={styles.root}>
         {help && <p className={styles.help}>{help}</p>}
-        <ErrorMessage component='p' className={styles.error} name={name as string} />
+        {error && <p className={styles.error}>{error}</p>}
       </div>
     </div>
   );
