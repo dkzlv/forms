@@ -2,12 +2,10 @@ import React from 'react';
 import styles from './Control.module.css';
 
 export function Control({
-  name,
   help,
   error,
   children,
 }: {
-  name: string;
   help?: React.ReactNode;
   error?: React.ReactNode;
   children: React.ReactChild | React.ReactChildren;

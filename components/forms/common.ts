@@ -25,13 +25,13 @@ export const sendRequest = async (data: FormData) => {
   await delay();
   window.alert(JSON.stringify(data, null, 2));
   // Immitating remote validation logic
-  if (data.dlcName.toLocaleLowerCase() === 'witcher') throw new Error();
+  if (data.dlcName.toLocaleLowerCase() === 'oblivion') throw new Error();
 };
 
 export const minLength =
   (length = 5) =>
-  (value: { length: number }) => {
-    if (value.length < length) return `Should be at least ${length} symbols`;
+  (value: { length?: number }) => {
+    if (!value?.length || value.length < length) return `Should be at least ${length} symbols`;
   };
 
 export const minDate = (min: Date) => (value: Date) => {

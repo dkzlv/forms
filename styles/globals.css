@@ -26,7 +26,7 @@ a {
   box-sizing: border-box;
 }
 
-input,
+input:not([type='radio']),
 button,
 select,
 textarea {

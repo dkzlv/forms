@@ -1,4 +1,5 @@
 import React from 'react';
+import { Option } from '../types';
 
 export const Select: React.FC<
   {
@@ -33,5 +34,3 @@ export const Options: React.FC<{
     </>
   );
 };
-
-export type Option = { label: string; value: string };

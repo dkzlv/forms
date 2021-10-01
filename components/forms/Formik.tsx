@@ -138,7 +138,7 @@ function Error({ name }: { name: string }) {
   return <ErrorMessage component='span' name={name as string} />;
 }
 
-function Control(props: React.ComponentProps<typeof RawControl>) {
+function Control(props: React.ComponentProps<typeof RawControl> & { name: string }) {
   return <RawControl {...props} error={<Error name={props.name} />} />;
 }
 
